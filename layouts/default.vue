@@ -1,16 +1,17 @@
 <template>
   <div>
-    <h1>
-      
-    </h1>
-    <p>
-      
-    </p>
+    <TheHeader />
+    <Nuxt />
+    <TheFooter />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HomePage'
+
 }
 </script>
+
+<style>
+
+</style>
