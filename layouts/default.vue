@@ -34,7 +34,7 @@
     </main>
 
     <footer class="text-center py-5 text-gray-500 text-sm">
-      
+      Some footer
     </footer>
   </div>
 </template>
