@@ -1,14 +1,7 @@
 <template>
   <div>
-    <p v-if="$fetchState.pending">Fetching mountains...</p>
-    <p v-else-if="$fetchState.error">An error occurred :(</p>
-    <div v-else>
-      <h1>Blog posts</h1>
-      <ul>
-        <li v-for="post of posts" :key="post.id">{{ post.title }}</li>
-      </ul>
-      <button @click="$fetch">Refresh</button>
-    </div>
+    <h1>{{ post.title }}</h1>
+    <p>{{ post.description }}</p>
   </div>
 </template>
 
