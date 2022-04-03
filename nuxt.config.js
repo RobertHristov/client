@@ -19,6 +19,9 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
   ],
+  router: {
+    routes: {path: '/id/:id', component: 'pages'}
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -34,8 +37,20 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
+  // Nuxt http added.
   modules: [
+    '@nuxtjs/axios',
   ],
+
+  axios: {
+    baseURL: 'https://jsonplaceholder.typicode.com/posts/', // Can be also an object with default options
+  },
+
+  router:{
+    routes: [
+      {path: 'posts/post/:id', component: () => import ('..posts/_post.vue')}
+    ]
+  },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
